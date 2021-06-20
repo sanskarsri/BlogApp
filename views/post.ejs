@@ -1,0 +1,14 @@
+<%- include("partials/header", {name: name,p_link: p_link}) %>
+
+<div class="card">
+    <h5 class="card-header">
+        <%= ptitle %>
+    </h5>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p><%= pblog %></p>
+        <footer class="blockquote-footer">Posted by <cite title="Source Title"><%= pauth %></cite></footer>
+      </blockquote>
+    </div>
+  </div>
+<%- include("partials/footer") -%>
