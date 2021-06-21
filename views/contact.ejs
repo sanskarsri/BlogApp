@@ -1,6 +1,60 @@
 <%- include("partials/header", {name: name,p_link: p_link}) %>
 
-<h1>Contact</h1>
+<h2>Contact</h2>
 <p><%= para_content %></p>
+<hr>
+<div class="row">
+    <div class="col-lg-3">
+        <h2>Developer:</h2>
+    </div>
+    <div class="card col-lg-3 col-sm-10 " >
+        <div class="card row" style="padding-bottom:-10px">
+            <img class="card-img-top" src="/images/developer.jpg" alt="Developer's image">
+            <div class="card-body">
+              <h5 class="card-title">Sanskar Srivastava</h5>
+              <p class="card-text">
+                <span class="font-weight-bolder">Mobile:</span> +91-9140862568 <br>
+                <span class="font-weight-bolder">Email:</span> sanskar0703@gmail.com
+            </p>
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-sm-10 mx-auto d-flex flex-column justify-content-center align-items-center">
+        <div class="card social-block">
+            <div class="card-body">
+              <a class="btn btn-github social-block-btn" href="https://github.com/sanskarsri" role="button">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <div class="card-body">
+                <a class="btn btn-success social-block-btn" href="https://wa.me/9140862568" role="button">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            <div class="card-body">
+              <a class="btn btn-danger social-block-btn" href="https://www.instagram.com/its.sanskar.sri/" role="button">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+    </div>
+    <div class="col-lg-3 col-sm-10 mx-auto d-flex flex-column justify-content-center">
+        <form action="/contact" method="POST">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" name="email" class="form-control" placeholder="email address" required>
+            </div>
+
+            <div class="form-group">
+              <label for="Textarea">Feedback</label>
+              <textarea class="form-control" name="feedback" rows="3"></textarea>
+            </div>
+            <button class="btn btn-dark form_btn" type="submit">Submit</button>
+          </form>
+    </div>
+</div>
+
+
 
 <%- include("partials/footer") -%>

@@ -2,11 +2,11 @@
 <%=console.log(name)%>
 
 <h1><%= profile %></h1>
-<h6><i>All Blog Posts of <%= profile %> are  mentioned below. </i></h6>
+<h6 class="pb-5"><i>All Blog Posts of <%= profile %> are  mentioned below. </i></h6>
 
 <% posts.forEach(function(post){ %>
     <h1><%= post.title %>.</h1>
-    <p><%= post.blog.substring(0,100) %>...<a href="post/<%=post._id%>">Read More</a></p>
+    <p><%= post.blog.substring(0,100) %>...<a href="/post/<%=post._id%>">Read More</a></p>
 
 <% })%>
         

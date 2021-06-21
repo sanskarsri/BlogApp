@@ -1,3 +1,6 @@
+body{
+    overflow-wrap: break-word;
+}
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -23,6 +26,7 @@
 	position: fixed;
 	text-align: center;
 	bottom: 0;
+    left:0;
 	width: 100%;
 	height: 60px;
 	background-color: #1abc9c;
@@ -33,3 +37,81 @@
 	font-size: 12px;
   color: #fff;
 }
+
+@media screen and (max-device-width: 430px) {
+
+    .container, .container-md, .container-sm {
+        max-width: 93vw;
+    }
+    /* .navbar{
+        height: 100px;
+    } */
+    .navbar-brand, .navbar-dark .navbar-toggler-icon{
+        font-size: 4.5vw;
+    }
+    .nav-link, .dropdown-item{
+        font-size: 3.8vw;
+    padding: 20px;
+    }
+    .footer {
+        height: 6vh;
+    }
+    .footer p{
+        font-size: 4vw;
+    }
+    .container h1
+    {
+        font-size: 7vw;
+    }
+    .container h1:nth-child(1),.card-header
+    {
+        font-size: 9vw;
+    }
+    .container p
+    {
+        font-size: 5.4vw;
+        margin-bottom: 3vh;
+    }
+    .post{
+        margin-top: 100px;
+    }
+    .blockquote-footer{
+        font-size: 5vw;
+    }
+    h2, h5, h6 {
+        font-size: 7vw;
+    }
+    .card.social-block {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0px;
+    }
+    .social-block-btn {
+        font-size: 7vw;
+    height: 12vw;
+    /* padding: 37px; */
+    border-radius: 8vw;
+    width: 12vw;
+    }
+    label, .form-control{
+    font-size: 5vw;
+    }
+    .form_btn {
+        font-size: 4vw;
+    }
+    .social_log{
+        margin-top: 50px;
+    }
+    .text {
+        font-size: 4.5vw;
+        padding-left: 3vw;
+    }
+    .reg.fa-google:before, .reg.fa-github:before {
+        position: absolute;
+        transform: translate(0px, 18px);
+        font-size: 5vw;
+    }
+    .footer-padding {
+        padding-bottom: 170px;
+    }
+  }
