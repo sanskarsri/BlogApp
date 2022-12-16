@@ -31,7 +31,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect('mongodb+srv://sanskar:database.find()@firstdatabase.5taea.mongodb.net/blog_web',{useNewUrlParser: true});
+mongoose.connect(process.env.DB,{useNewUrlParser: true});
 // mongoose.connect('mongodb://localhost:27017/blog_web', {useNewUrlParser: true});
 
 const postSchema = new mongoose.Schema({
@@ -79,7 +79,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  callbackURL: "https://blog0703.herokuapp.com/auth/google/BlogPost",
+  callbackURL: `${process.env.HOST}/auth/google/BlogPost`,
   userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
 },
 function(accessToken, refreshToken, profile, cb) {
@@ -95,7 +95,7 @@ function(accessToken, refreshToken, profile, cb) {
 passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_CLIENT_ID,
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
-  callbackURL: "https://blog0703.herokuapp.com/auth/github/BlogPost"
+  callbackURL: `${process.env.HOST}/auth/github/BlogPost`
 },
 function(accessToken, refreshToken, profile, done) {
   User.findOrCreate({ githubId: profile.id, username: profile.username }, function (err, user) {
